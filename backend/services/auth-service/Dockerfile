@@ -7,5 +7,4 @@ RUN apt-get update -y && apt-get install -y openssl && rm -rf /var/lib/apt/lists
 
 COPY . .
 RUN npm ci && npx prisma generate && npx nest build auth-service
-# Nest monorepo outputs auth-service to dist/src/ (not dist/auth-service/src/)
-CMD ["node", "dist/src/main.js"]
+CMD ["node", "dist/auth-service/src/main.js"]
