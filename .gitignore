@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Frontend Vite build artifacts
+frontend/vite.config.d.ts
+frontend/vite.config.js
+frontend/tsconfig.tsbuildinfo
+frontend/tsconfig.node.tsbuildinfo
+
+# Prisma generated client (se regenera con prisma generate)
+backend/node_modules/.prisma/
+
+# Test coverage
+coverage/
+**/coverage/

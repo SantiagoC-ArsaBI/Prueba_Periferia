@@ -10,7 +10,7 @@ describe('PostService', () => {
   let prisma: jest.Mocked<
     Pick<PrismaService, 'post' | 'like' | '$queryRaw' | '$executeRaw'>
   >;
-  let likesGateway: jest.Mocked<Pick<LikesGateway, 'broadcastLike'>>;
+  let likesGateway: jest.Mocked<Pick<LikesGateway, 'broadcastLike' | 'broadcastNewPost'>>;
 
   const mockAuthor = {
     id: 1,
@@ -44,6 +44,7 @@ describe('PostService', () => {
     >;
     likesGateway = {
       broadcastLike: jest.fn(),
+      broadcastNewPost: jest.fn(),
     };
 
     const module: TestingModule = await Test.createTestingModule({
